@@ -275,16 +275,11 @@ python advanced_visualizations.py
 ---
 
 # Author
-Pellakuru Mahathi**
+PELLAKURU MAHATHI**
 
 Computer Science & Business Systems Graduate  
 Aspiring Data Analyst | Business Analyst | Product Analyst
 
 If you found this project interesting, feel free to star the repository.
 
-**Pellakuru Mahathi**
-
-Computer Science & Business Systems Graduate  
-Aspiring Data Analyst | Business Analyst | Product Analyst
-
-If you found this project interesting, feel free to ⭐ the repository.
+.

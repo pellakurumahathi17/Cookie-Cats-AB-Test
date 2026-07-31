@@ -6,9 +6,9 @@ Analyzed an A/B experiment on **90,189 mobile game players** to evaluate whether
 
 ## Business Impact
 
-- Evaluated the effect of changing the progression gate on player retention.
-- Found that moving the gate to Level 40 reduced seven-day retention.
-- Recommended keeping the original gate placement to maximize long-term engagement.
+- Moving the progression gate from Level 30 to Level 40 reduced Day 7 retention by **0.82 percentage points**.
+- Across **45,489 players** in the experiment, this corresponds to approximately **370 fewer returning players** after seven days.
+- Based on these results, retaining the original gate placement would likely preserve long-term player engagement.
 
 ---
 

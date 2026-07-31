@@ -144,11 +144,6 @@ Built visualizations to compare retention, explore gameplay behavior, and unders
 
 #  Additional Visualizations
 
-## Retention Comparison
-
-![Retention Comparison](OUTPUTS/retention_comparison.png)
-
----
 
 The repository also includes supporting visualizations such as:
 

@@ -150,21 +150,14 @@ Built visualizations to compare retention, explore gameplay behavior, and unders
 
 ---
 
-## Player Engagement vs Retention
+The repository also includes supporting visualizations such as:
 
-![Engagement](OUTPUTS/engagement_retention.png)
+- Retention Comparison
+- Player Engagement vs. Retention
+- Game Rounds Distribution
+- Box Plot of Player Activity
 
----
-
-## Game Rounds Distribution
-
-![Histogram](OUTPUTS/histogram.png)
-
----
-
-## Player Game Rounds Box Plot
-
-![Boxplot](OUTPUTS/boxplot.png)
+These charts are available in the **OUTPUTS** folder.
 
 ---
 

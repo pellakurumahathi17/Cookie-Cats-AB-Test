@@ -275,7 +275,7 @@ python advanced_visualizations.py
 ---
 
 # Author
-PELLAKURU MAHATHI**
+PELLAKURU MAHATHI
 
 Computer Science & Business Systems Graduate  
 Aspiring Data Analyst | Business Analyst | Product Analyst

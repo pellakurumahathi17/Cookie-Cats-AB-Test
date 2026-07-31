@@ -2,137 +2,116 @@
 
 Analyzed an A/B experiment on **90,189 mobile game players** to evaluate whether moving the progression gate from **Level 30 to Level 40** improved player retention. The project combines **PostgreSQL, SQL, Python, statistical hypothesis testing, and data visualization** to support data-driven product decisions.
 
+---
 
+## Business Impact
 
-#  Business Problem
-
-Cookie Cats is a popular mobile puzzle game that uses progression gates to encourage players to either wait or make in-app purchases before continuing.
-
-The product team wanted to answer one key question:
-
-> **Does moving the progression gate from Level 30 to Level 40 improve player retention?**
-
-The objective was to determine whether the new gate placement increased long-term player engagement without negatively affecting the user experience.
+- Evaluated the effect of changing the progression gate on player retention.
+- Found that moving the gate to Level 40 reduced seven-day retention.
+- Recommended keeping the original gate placement to maximize long-term engagement.
 
 ---
 
-#  Objectives
+## Key Skills
 
-- Verify that users were randomly assigned between experiment groups.
-- Compare Day-1 and Day-7 retention rates.
-- Determine whether observed differences were statistically significant.
-- Analyze player engagement patterns.
-- Provide a business recommendation based on experimental evidence.
+SQL • PostgreSQL • Python • Pandas • Statistics • A/B Testing • Product Analytics • Data Visualization
 
 ---
 
-#  Stakeholders
+## Business Problem
+
+Progression gates are commonly used in mobile games to control player progression and encourage engagement. The product team wanted to understand whether delaying the gate from Level 30 to Level 40 would improve player retention without negatively affecting the user experience.
+
+---
+
+## Objectives
+
+- Verify random assignment between experiment groups.
+- Compare Day 1 and Day 7 retention.
+- Test whether the observed differences were statistically significant.
+- Explore player engagement patterns.
+- Provide a recommendation based on the results.
+
+---
+
+## Stakeholders
 
 - Product Managers
 - Product Analysts
 - Game Designers
-- Data Analysts
 - Growth Team
+- Data Analysts
 
 ---
 
-#  Dataset
+## Dataset
 
 **Source:** Cookie Cats A/B Testing Dataset (Kaggle)
 
-### Dataset Overview
-
 | Attribute | Details |
 |-----------|---------|
-| Total Players | 90,189 |
-| Experiment Groups | Gate 30 & Gate 40 |
-| Key Features | userid, version, sum_gamerounds, retention_1, retention_7 |
+| Players | 90,189 |
+| Groups | Gate 30, Gate 40 |
+| Key Columns | userid, version, sum_gamerounds, retention_1, retention_7 |
+
+**Note:** The dataset can be downloaded from Kaggle.
 
 ---
 
-#  Tools & Technologies
+## Tools Used
 
 | Tool | Purpose |
 |------|---------|
-| PostgreSQL | Data Storage & Querying |
-| SQL | Exploratory Analysis |
-| Python | Statistical Testing |
-| Pandas | Data Analysis |
-| Statsmodels | Two-Proportion Z-Test |
-| Matplotlib | Data Visualization |
-| VS Code | Development Environment |
-| Git & GitHub | Version Control |
+| PostgreSQL | Data querying |
+| SQL | Exploratory analysis |
+| Python | Statistical analysis |
+| Pandas | Data manipulation |
+| Statsmodels | Two-proportion z-test |
+| Matplotlib | Data visualization |
+| Git & GitHub | Version control |
 
 ---
 
-#  Methodology
+## Methodology
 
-### Business Understanding
-
-- Defined experiment objective
-- Identified success metric (player retention)
-
-### SQL Analysis
-
-- Imported dataset into PostgreSQL
-- Explored dataset structure
-- Verified randomization balance
-- Calculated Day-1 retention
-- Calculated Day-7 retention
-- Extracted counts for statistical testing
-
-### Statistical Analysis (Python)
-
-Compared retention between experiment groups using a two-proportion z-test to determine whether the observed differences were statistically significant.
-
-### Data Visualization
-
-Built visualizations to compare retention, explore gameplay behavior, and understand how early engagement influenced long-term player retention.
+1. Loaded the dataset into PostgreSQL.
+2. Used SQL to explore the data and calculate retention metrics.
+3. Extracted experiment counts for statistical testing.
+4. Performed two-proportion z-tests in Python.
+5. Created visualizations to understand retention and player engagement.
+6. Interpreted the results from a product perspective.
 
 ---
 
-#  Key Results
+## Results
 
 | Metric | Gate 30 | Gate 40 |
 |---------|---------|---------|
-| Users | 44,700 | 45,489 |
-| Day-1 Retention | **44.82%** | **44.23%** |
-| Day-7 Retention | **19.02%** | **18.20%** |
+| Players | 44,700 | 45,489 |
+| Day 1 Retention | 44.82% | 44.23% |
+| Day 7 Retention | 19.02% | 18.20% |
+
+### Statistical Results
+
+| Metric | P-value | Conclusion |
+|---------|---------|------------|
+| Day 1 Retention | 0.074 | Not statistically significant |
+| Day 7 Retention | 0.0015 | Statistically significant |
 
 ---
 
-#  Statistical Findings
+## Key Insights
 
-### Day-1 Retention
-
-- **P-value:** 0.074
-- Difference was **not statistically significant**.
-
-### Day-7 Retention
-
-- **P-value:** ≈ 0.0015
-- Difference was **statistically significant**.
+- Moving the progression gate had no meaningful effect on Day 1 retention.
+- Players exposed to the original gate showed higher Day 7 retention.
+- Long-term engagement declined after moving the gate to Level 40.
+- Players who completed more game rounds were much more likely to return after seven days.
 
 ---
 
-#  Key Business Insights
+## Business Recommendation
 
-- Moving the progression gate to **Level 40 did not improve early retention**.
-- **Gate 30 achieved higher Day-7 retention**, indicating better long-term engagement.
-- Player activity is highly skewed, with a small percentage of highly engaged users.
-- Players completing more game rounds were significantly more likely to return after seven days.
-
----
-
-#  Business Recommendation
-
-**Recommendation:** Maintain the progression gate at **Level 30**.
-
-### Why?
-
-- No statistically significant improvement in Day-1 retention.
-- Statistically significant decrease in Day-7 retention after moving the gate to Level 40.
-- Delaying the progression gate reduced long-term player engagement without delivering measurable benefits.
+Based on the statistical analysis, the progression gate should remain at Level 30. The experiment showed no improvement in early retention and a statistically significant decrease in seven-day retention after moving the gate to Level 40.
 
 ---
 
@@ -140,44 +119,19 @@ Built visualizations to compare retention, explore gameplay behavior, and unders
 
 ![Dashboard](OUTPUTS/dashboard.png)
 
----
-
-#  Additional Visualizations
-
-
-The repository also includes supporting visualizations such as:
-
-- Retention Comparison
-- Player Engagement vs. Retention
-- Game Rounds Distribution
-- Box Plot of Player Activity
-
-These charts are available in the **OUTPUTS** folder.
+Additional charts, including the retention comparison, engagement analysis, histogram, and box plot, are available in the OUTPUTS folder.
 
 ---
 
-#  Repository Structure
+## Repository Structure
 
 ```text
-Cookie-Cats-AB-Test
+Cookie-Cats-AB-Test/
 │
 ├── data
-│   └── cookie_cats.csv
-│
 ├── OUTPUTS
-│   ├── dashboard.png
-│   ├── retention_comparison.png
-│   ├── engagement_retention.png
-│   ├── histogram.png
-│   └── boxplot.png
-│
 ├── PYTHON
-│   ├── analysis.py
-│   └── advanced_visualizations.py
-│
 ├── SQL
-│   └── ab_test_analysis.sql
-│
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -185,15 +139,13 @@ Cookie-Cats-AB-Test
 
 ---
 
-#  How to Run
+## How to Run
 
-## 1️ PostgreSQL
+### SQL
 
-- Create a PostgreSQL database.
-- Import the Cookie Cats dataset.
-- Execute the SQL analysis script.
+Create a PostgreSQL database and run the SQL analysis script.
 
-## 2️ Python
+### Python
 
 Install the required libraries:
 
@@ -201,13 +153,13 @@ Install the required libraries:
 pip install -r requirements.txt
 ```
 
-Run the analysis:
+Run:
 
 ```bash
 python analysis.py
 ```
 
-Generate the dashboard:
+Generate the visualizations:
 
 ```bash
 python advanced_visualizations.py
@@ -215,52 +167,34 @@ python advanced_visualizations.py
 
 ---
 
-#  Future Improvements
+## Future Improvements
 
 - Bayesian A/B testing
-- Confidence interval visualization
 - Revenue impact estimation
+- Interactive dashboards
 - Sequential experiment analysis
-- Automated stakeholder report generation using LLMs
-- Interactive dashboard using Power BI or Tableau
+- Automated reporting
 
 ---
 
-#  Skills Demonstrated
-
-### Analytics
+## Skills Demonstrated
 
 - A/B Testing
 - Product Analytics
-- Statistical Hypothesis Testing
-- Confidence Interval Analysis
-- Business Decision Making
-
-### Technical
-
-- PostgreSQL
+- Statistical Analysis
 - SQL
+- PostgreSQL
 - Python
 - Pandas
-- Statsmodels
-- Matplotlib
-- Git & GitHub
-
-### Business
-
-- Product Experimentation
-- Data Storytelling
 - Data Visualization
-- Recommendation Writing
+- Business Decision Making
 
 ---
 
-# Author
-PELLAKURU MAHATHI
+## Author
 
-Computer Science & Business Systems Graduate  
-Aspiring Data Analyst | Business Analyst | Product Analyst
+**Pellakuru Mahathi**
 
-If you found this project interesting, feel free to star the repository.
+Computer Science & Business Systems Graduate
 
-.
+Aspiring Data Analyst | Business Analyst

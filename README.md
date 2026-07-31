@@ -83,18 +83,11 @@ The objective was to determine whether the new gate placement increased long-ter
 
 ### Statistical Analysis (Python)
 
-- Performed Two-Proportion Z-Test
-- Calculated Confidence Intervals
-- Evaluated statistical and practical significance
+Compared retention between experiment groups using a two-proportion z-test to determine whether the observed differences were statistically significant.
 
 ### Data Visualization
 
-Developed visualizations to understand:
-
-- Retention comparison
-- Player engagement
-- Gameplay distribution
-- User behavior patterns
+Built visualizations to compare retention, explore gameplay behavior, and understand how early engagement influenced long-term player retention.
 
 ---
 
@@ -143,7 +136,7 @@ Developed visualizations to understand:
 
 ---
 
-#  Dashboard
+## Dashboard
 
 ![Dashboard](OUTPUTS/dashboard.png)
 
